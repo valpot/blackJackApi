@@ -1,7 +1,7 @@
 
 <p align="center"><a href="https://symfony.com" target="_blank">
     <img 
-    src="https://toppng.com/uploads/preview/01-logo-blackjack-black-blackjackhtml5-thumbnail-blackjack-11563224439htx341rgd3.png" 
+    src="https://image.flaticon.com/icons/svg/1983/1983632.svg" 
     width="350">
 </a></p>
 
