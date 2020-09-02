@@ -1,6 +1,8 @@
 {
+    "name": "valpot/bridge-landwehr",
+    "description": "An API helping you to make the best choices when playing BlackJack",
     "type": "project",
-    "license": "proprietary",
+    "license": "LGPL",
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.2.5",
@@ -10,6 +12,7 @@
         "symfony/dotenv": "5.2.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "5.2.*",
+        "symfony/monolog-bundle": "^3.0@dev",
         "symfony/yaml": "5.2.*"
     },
     "require-dev": {
