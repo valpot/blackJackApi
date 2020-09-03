@@ -8,7 +8,6 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "phpstan/phpstan": "^0.12.0@dev",
         "sensio/framework-extra-bundle": "^5.6@dev",
         "symfony/console": "5.2.*",
         "symfony/dotenv": "5.2.*",
@@ -18,6 +17,12 @@
         "symfony/yaml": "5.2.*"
     },
     "require-dev": {
+        "codeception/codeception": "4.1.x-dev",
+        "codeception/module-asserts": "dev-master",
+        "codeception/module-phpbrowser": "dev-master",
+        "codeception/module-rest": "dev-master",
+        "codeception/module-symfony": "dev-master",
+        "phpstan/phpstan": "^0.12.0@dev"
     },
     "config": {
         "optimize-autoloader": true,
