@@ -50,6 +50,10 @@ class DealerController extends AbstractController
 
         $remainingCards = $body['remainingCards'];
 
+        if (count($remainingCards) < 1) {
+            return new JsonResponse(sprintf("There should be at least a value in 'remainingCards', %s given", count($remainingCards)), 422);
+        }
+
         foreach ($remainingCards as $card) {
             if (!is_int($card) || $card < 1 || $card > 10) {
                 return new JsonResponse(sprintf("Wrong value found in 'remainingCards': %s. Expected values are integer between 1 and 10 included", $card), 422);
