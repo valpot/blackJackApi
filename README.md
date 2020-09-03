@@ -12,6 +12,21 @@ This API helps you when playing blackjack, it calculates win probability, dealer
  
 Installation
 --
- 
+Just enter:
+
+>make it
+
+It will build the project then run the server.
+
 Routes
 --
+
+>(**POST**) /dealer/bust 
+>
+>Calculates the probability that the dealer will bust with a given hand and deck.
+>
+>*Parameters:* 
+> - **hand** (integer array) : the dealer hand
+> - **remainingCards** (integer array): the remaining cards in the deck
+>
+> Returns a float between 0 and 1.
