@@ -4,6 +4,10 @@ namespace App\Logic\Calculation;
 
 class DeckHandler
 {
+    /**
+     * @param array<int> $cards
+     * @return int
+     */
     public function getSum(array $cards): int
     {
         $sum         = 0;
@@ -29,12 +33,11 @@ class DeckHandler
         return $sum;
     }
 
-    public function removeCardFromDeck(int $card, array &$deck)
-    {
-        array_splice($deck, array_search($card, $deck), 1);
-    }
-
-    public function addCardToDeck(int $card, array &$deck)
+    /**
+     * @param int        $card
+     * @param array<int> $deck
+     */
+    public function removeCardFromDeck(int $card, array &$deck): void
     {
         array_splice($deck, array_search($card, $deck), 1);
     }
