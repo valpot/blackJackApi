@@ -16,6 +16,11 @@ class DealerProbabilityCalculator
         $this->deckHandler = $deckHandler;
     }
 
+    /**
+     * @param array<int> $dealerCards
+     * @param array<int> $remainingCards
+     * @return float
+     */
     public function getBustingProbability(array $dealerCards, array $remainingCards): float
     {
         $bustingProbability = 0;
