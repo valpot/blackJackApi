@@ -12,11 +12,29 @@ This API helps you when playing blackjack, it calculates win probability, dealer
  
 Installation
 --
-Just enter:
+docker-compose setup:
 
->make it
+>docker-compose up -d --build
 
-It will build the project then run the server.
+It will build the Docker image then run the server trough docker-compose.
+You can then browse localhost:2121 ;)
+
+Tips
+--
+
+In order to display all logs
+
+>docker-compose logs -f 
+
+In order to display only logs from a specific container
+
+>docker-compose logs php
+
+>docker-compose logs nginx
+
+In order to exec command inside a container and do task like composer install
+
+>docker-compose exec php sh
 
 Routes
 --
