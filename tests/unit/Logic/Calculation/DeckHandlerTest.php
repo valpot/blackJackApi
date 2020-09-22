@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Tests\Logic\Calculation;
 
-use \App\Tests\UnitTester;
 use App\Logic\Calculation\DeckHandler;
+use App\Tests\UnitTester;
 
 /**
  * Class DeckHandlerTest.
@@ -47,14 +47,14 @@ class DeckHandlerTest extends \Codeception\Test\Unit
     /**
      * @dataProvider provider_test_getSum_shouldReturnRightTotal
      */
-    public function test_getSum_shouldReturnRightTotal(array $cards, int $expectedTotal): void
+    public function testGetSumShouldReturnRightTotal(array $cards, int $expectedTotal): void
     {
         $result = $this->sut->getSum($cards);
 
         $this->assertEquals($expectedTotal, $result);
     }
 
-    public function test_removeCardFromDeck_cardExist_shouldRemoveCard(): void
+    public function testRemoveCardFromDeckCardExistShouldRemoveCard(): void
     {
         $card = 2;
 
@@ -81,7 +81,7 @@ class DeckHandlerTest extends \Codeception\Test\Unit
         $this->assertContains(2, $deck);
     }
 
-    public function test_removeCardFromDeck_cardNotExist_shouldDoNothing(): void
+    public function testRemoveCardFromDeckCardNotExistShouldDoNothing(): void
     {
         $card = 3;
 
