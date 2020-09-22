@@ -19,7 +19,6 @@ class DealerProbabilityCalculator
     /**
      * @param array<int> $dealerCards
      * @param array<int> $remainingCards
-     * @return float
      */
     public function getBustingProbability(array $dealerCards, array $remainingCards): float
     {
@@ -29,10 +28,10 @@ class DealerProbabilityCalculator
                 self::VALUES => [
                     json_encode($dealerCards) => [
                         self::SUM         => $this->deckHandler->getSum($dealerCards),
-                        self::PROBABILITY => 1
-                    ]
-                ]
-            ]
+                        self::PROBABILITY => 1,
+                    ],
+                ],
+            ],
         ];
 
         $nesting      = 1;
@@ -40,11 +39,10 @@ class DealerProbabilityCalculator
         while ($needsNesting) {
             $handTree[$nesting] = [
                 self::VALUES      => [],
-                self::PROBABILITY => 0
+                self::PROBABILITY => 0,
             ];
 
             foreach ($handTree[$nesting - 1][self::VALUES] as $parentHandAsString => $parentHandInfo) {
-
                 $parentHand         = json_decode($parentHandAsString, true);
                 $tempRemainingCards = $remainingCards;
 
@@ -85,11 +83,9 @@ class DealerProbabilityCalculator
 
             $bustingProbability += $handTree[$nesting][self::PROBABILITY];
             $needsNesting       = count($handTree[$nesting][self::VALUES]) > 0;
-            $nesting++;
+            ++$nesting;
         }
 
         return $bustingProbability;
     }
 }
-
-

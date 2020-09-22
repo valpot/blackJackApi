@@ -17,40 +17,40 @@ class DealerControllerTest extends Unit
         return [
             [
                 [
-                    "hand"           => [2],
-                    "remainingCards" => $deck
+                    'hand'           => [2],
+                    'remainingCards' => $deck,
                 ],
-                200
+                200,
             ],
             [
                 [
-                    "hand"           => [],
-                    "remainingCards" => $deck
+                    'hand'           => [],
+                    'remainingCards' => $deck,
                 ],
-                200
+                200,
             ],
             [
                 [
-                    "hand"           => [2],
-                    "remainingCards" => []
+                    'hand'           => [2],
+                    'remainingCards' => [],
                 ],
-                422
+                422,
             ],
             [
                 [],
-                422
+                422,
             ],
             [
                 [
-                    "hand" => [2]
+                    'hand' => [2],
                 ],
-                422
+                422,
             ],
             [
                 [
-                    "remainingCards" => $deck
+                    'remainingCards' => $deck,
                 ],
-                422
+                422,
             ],
         ];
     }
