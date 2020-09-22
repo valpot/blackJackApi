@@ -16,3 +16,6 @@ test:
 	php vendor/bin/codecept run --steps
 
 qa: phpstan
+
+cs:
+	./vendor/bin/php-cs-fixer fix
