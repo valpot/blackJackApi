@@ -20,6 +20,17 @@ It will build the project then run the server.
 
 Routes
 --
+>(**POST**) /player/play 
+>
+>Returns the player's most optimal play.
+>
+>*Parameters:* 
+> - **playerHand** (integer array) : the player hand
+> - **dealerHand** (integer array) : the dealer hand
+> - **remainingCards** (integer array): the remaining cards in the deck
+>
+> Returns a string which is either **hit**, **stand**, **double** or **split**.
+>
 
 >(**POST**) /dealer/bust 
 >
