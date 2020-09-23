@@ -6,7 +6,6 @@ class DeckHandler
 {
     /**
      * @param array<int> $cards
-     * @return int
      */
     public function getSum(array $cards): int
     {
@@ -14,8 +13,8 @@ class DeckHandler
         $remainingAs = 0;
 
         foreach ($cards as $card) {
-            if ($card === 1) {
-                $remainingAs++;
+            if (1 === $card) {
+                ++$remainingAs;
                 continue;
             }
 
@@ -27,14 +26,13 @@ class DeckHandler
                 ? 1
                 : 11;
 
-            $remainingAs--;
+            --$remainingAs;
         }
 
         return $sum;
     }
 
     /**
-     * @param int        $card
      * @param array<int> $deck
      */
     public function removeCardFromDeck(int $card, array &$deck): void

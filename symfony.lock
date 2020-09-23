@@ -53,6 +53,12 @@
     "codeception/stub": {
         "version": "3.7.0"
     },
+    "composer/semver": {
+        "version": "3.x-dev"
+    },
+    "composer/xdebug-handler": {
+        "version": "1.4.3"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -73,6 +79,18 @@
     },
     "flow/jsonpath": {
         "version": "0.5.0"
+    },
+    "friendsofphp/php-cs-fixer": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cc05ab6abf6894bddb9bbd6a252459010ebe040b"
+        },
+        "files": [
+            ".php_cs.dist"
+        ]
     },
     "guzzlehttp/guzzle": {
         "version": "7.1-dev"
@@ -100,6 +118,9 @@
     },
     "php": {
         "version": "7.2"
+    },
+    "php-cs-fixer/diff": {
+        "version": "v1.3.0"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.x-dev"
@@ -323,6 +344,9 @@
             "config/packages/test/monolog.yaml"
         ]
     },
+    "symfony/options-resolver": {
+        "version": "5.2-dev"
+    },
     "symfony/polyfill-intl-grapheme": {
         "version": "1.18-dev"
     },
@@ -337,6 +361,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "1.18-dev"
+    },
+    "symfony/process": {
+        "version": "5.2-dev"
     },
     "symfony/routing": {
         "version": "5.1",
@@ -354,6 +381,9 @@
     },
     "symfony/service-contracts": {
         "version": "2.1-dev"
+    },
+    "symfony/stopwatch": {
+        "version": "5.2-dev"
     },
     "symfony/string": {
         "version": "5.2-dev"

@@ -10,7 +10,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/dealer", name="dealer_")
- *
  */
 class DealerController extends AbstractController
 {
@@ -24,9 +23,6 @@ class DealerController extends AbstractController
 
     /**
      * @Route("/bust", methods={"POST"}, name="bust")
-     *
-     * @param Request $request
-     * @return JsonResponse
      */
     public function getBustProbability(Request $request): JsonResponse
     {
