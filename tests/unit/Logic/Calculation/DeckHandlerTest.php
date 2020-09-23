@@ -34,6 +34,10 @@ class DeckHandlerTest extends \Codeception\Test\Unit
                 21,
             ],
             [
+                [10, 1, 2],
+                13,
+            ],
+            [
                 [10, 10, 10],
                 30,
             ],
