@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Logic\Calculation\DealerProbabilityCalculator;
+use OpenApi\Annotations as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +23,46 @@ class DealerController extends AbstractController
     }
 
     /**
+     * Get probability for player to bust on next card.
+     *
      * @Route("/bust", methods={"POST"}, name="bust")
+     *
+     * @OA\Post(
+     *     tags={"Dealer"},
+     *     @OA\RequestBody(
+     *         @OA\JsonContent(
+     *           type="object",
+     *           @OA\Property(
+     *             property="hand",
+     *             description="Hand of user",
+     *             type="array",
+     *             @OA\Items(type="integer", example=1)
+     *           ),
+     *           @OA\Property(
+     *             property="remainingCards",
+     *             description="List of remaining cards",
+     *             type="array",
+     *             @OA\Items(type="integer", example=1)
+     *          )
+     *        )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="get probability to bust on next card",
+     *         @OA\JsonContent(
+     *            type="integer",
+     *            example="0.123456789"
+     *         )
+     *    ),
+     *    @OA\Response(
+     *         response=422,
+     *         description="Invalid datas are provider",
+     *         @OA\JsonContent(
+     *            type="string",
+     *            example="Missing 'hand' array in the message body."
+     *         )
+     *    )
+     * )
      */
     public function getBustProbability(Request $request): JsonResponse
     {
